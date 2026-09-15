@@ -1,0 +1,124 @@
+/* === Palette === */
+:root {
+    --blue: #336B9B;
+    --blue-dark: #234C70;
+    --pink: #FABBCA;
+    --pink-light: #FDE5EC;
+    --background: #F7F4F5;
+    --text-dark: #24333F;
+    --white: #FFFFFF;
+}
+
+/* === Styles généraux === */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text-dark);
+    text-align: center;
+}
+
+/* === En-tête (bannière) === */
+.masthead {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* === Barre de navigation === */
+.navbar {
+    background: var(--blue-dark);
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+/* === Menu déroulant === */
+.navbar ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: var(--blue);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 10px;
+    display: block;
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
+}
+
+/* === Effet hover sur le menu principal === */
+.navbar ul li:hover {
+    background-color: var(--pink);
+    border-radius: 5px;
+}
+
+.navbar ul li:hover > a {
+    color: var(--blue-dark);
+}
+
+/* === Effet hover sur le menu déroulant === */
+.dropdown-menu li:hover {
+    background-color: var(--pink-light);
+}
+
+.dropdown-menu li:hover a {
+    color: var(--blue-dark);
+}
+
+/* === Style pour afficher la plaquette en grand === */
+.plaquette-container {
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.plaquette-img {
+    width: 80%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(35, 76, 112, 0.20);
+}
+
+/* === GIF central réduit à 50 % === */
+.gif-central {
+    width: 50%;
+    height: auto;
+}
+
+/* === Responsive === */
+@media (max-width: 767px) {
+    .gif-central {
+        width: 70%;
+    }
+}
